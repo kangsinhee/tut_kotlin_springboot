@@ -30,7 +30,7 @@ class EmailServiceImpl(
 
     private val emailLimiterRepository: EmailLimiterRepository,
     private val signUpVerificationRepository: SignUpVerificationRepository
-) : EmailService {
+): EmailService {
 
     override fun sendVerifyEmail(emailRequest: EmailRequest, sendType: SendType) {
         val email = emailRequest.email

@@ -14,6 +14,7 @@ import java.util.regex.Pattern
 class ValidateServiceImpl(
     private val userRepository: UserRepository
 ): ValidateService {
+
     override fun validateEmail(email: String) {
         val emailRegex = "^[0-9a-zA-Z._-]+@[0-9a-zA-Z.-]+\\.[a-zA-Z]{2,3}$"
 

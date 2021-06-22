@@ -75,7 +75,7 @@ class CommentServiceImpl(
     override fun updateSubComment(subCommentId: Int, commentRequest: CommentRequest): Int {
         val user = authService.verifyCurrentUser()
         val subComment = subCommentRepository.findById(subCommentId)
-                .orElseThrow { ApplicationNotFoundException() }
+            .orElseThrow { ApplicationNotFoundException() }
 
         val newContent = commentRequest.content
 

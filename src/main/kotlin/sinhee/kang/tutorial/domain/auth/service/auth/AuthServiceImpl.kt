@@ -26,7 +26,7 @@ class AuthServiceImpl(
     private val validateService: ValidateService,
 
     private val userRepository: UserRepository,
-) : AuthService {
+): AuthService {
 
     override fun signIn(signInRequest: SignInRequest, httpServletResponse: HttpServletResponse): TokenResponse {
         val email = signInRequest.email
